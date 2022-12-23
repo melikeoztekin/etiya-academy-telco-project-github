@@ -1,0 +1,20 @@
+<div class="form">
+  <div class="input-cont">
+    <label class="input"
+      >{{ inputLabel }} <span *ngIf="requiredField">*</span>
+    </label>
+    <i
+      [ngClass]="icon1"
+      aria-hidden="false"
+      *ngIf="!passwordShow"
+      (click)="passwordToggleEvent()"
+    ></i>
+    <i
+      [ngClass]="icon2"
+      aria-hidden="false"
+      *ngIf="passwordShow"
+      (click)="passwordToggleEvent()"
+    ></i>
+    <input [type]="inputType" [required]="requiredField" />
+  </div>
+</div>

@@ -1,0 +1,75 @@
+<app-main-layout>
+  <app-pop-up *ngIf="show"></app-pop-up>
+  <div [class.wrapper]="show">
+    <div class="d-flex justify-content-start">
+      <!-- button types -->
+      <etiya-button [buttonText]="'orange button'"></etiya-button>
+
+      <etiya-button
+        [buttonColor]="'bg-gray'"
+        [buttonText]="'gray button'"
+      ></etiya-button>
+
+      <etiya-button
+        [buttonColor]="'bg-blue'"
+        [buttonText]="'blue button'"
+      ></etiya-button>
+
+      <etiya-button
+        [icon]="'fa-solid fa-user-plus'"
+        [buttonText]="'icon button'"
+      ></etiya-button>
+    </div>
+
+    <div class="d-flex justify-content-start">
+      <!-- input types -->
+      <etiya-input
+        [requiredField]="false"
+        [inputLabel]="'Text input'"
+        class="w-50"
+      ></etiya-input>
+      <etiya-input
+        [requiredField]="true"
+        [inputLabel]="'Required text input'"
+        class="w-50"
+      ></etiya-input>
+      <etiya-input
+        [inputLabel]="'Number input'"
+        [inputType]="'number'"
+        class="w-50"
+      ></etiya-input>
+      <etiya-input
+        [inputLabel]="'Password input'"
+        [inputType]="'password'"
+        class="w-50"
+        [icon1]="'fa-solid fa-eye'"
+        [icon2]="'fa-solid fa-eye-slash'"
+      ></etiya-input>
+    </div>
+
+    <!-- blur effect with po-up button  -->
+    <etiya-button
+      (click)="runPopUp()"
+      [buttonText]="'Pop-up show'"
+    ></etiya-button>
+
+    <!-- internationalization -->
+    <div class="pt-5 d-flex justify-content-start">
+      <h2>{{ "search_customer" | translate }}</h2>
+
+      <etiya-button
+        (click)="changeLanguage('tr')"
+        [buttonText]="'TR'"
+        class="w-25"
+      ></etiya-button>
+
+      <etiya-button
+        class="w-25"
+        (click)="changeLanguage('en')"
+        [buttonText]="'EN'"
+      ></etiya-button>
+    </div>
+
+    <button class="btn btn-success mt-5" routerLink="login">Go login</button>
+  </div>
+</app-main-layout>

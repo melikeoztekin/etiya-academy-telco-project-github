@@ -1,0 +1,103 @@
+@import "../../../../colors.scss";
+
+.sidebar {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.sidebar-bottom {
+  justify-items: flex-end;
+}
+
+.sidebar-logo {
+  padding: 4px 26px;
+  border-bottom: 0.5px solid $dark-blue;
+}
+
+.logo-img {
+  width: 194px;
+  height: 53px;
+}
+
+.logo-text {
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  margin-left: 33px;
+  margin-top: -10px;
+  color: $orange;
+}
+
+.user-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.user-img img {
+  width: 50px;
+  border-radius: 100%;
+  margin-right: 18px;
+}
+
+.user-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-desc strong {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 26px;
+  color: $black2;
+}
+
+.user-desc span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0.7px;
+  margin-top: -10px;
+  color: $dark-gray;
+}
+
+.sidebar-bottom {
+  padding: 30px 20px;
+}
+
+.sidebar-bottom-content {
+  padding: 20px 0px 0px 0px;
+  border-top: 0.5px solid $gray;
+  color: $dark-red;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.sidebar-button {
+  padding: 10px 20px 30px 20px;
+  text-align: start;
+}
+.sidebar-button-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sidebar-dark-btn {
+  padding: 10px 0px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $sb-btn;
+}
+
+.active {
+  background-color: $dark-blue;
+  color: $white;
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

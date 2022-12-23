@@ -1,0 +1,27 @@
+<div class="login-page">
+  <div class="login-container">
+    <div class="logo-temp">
+      <div class="logo-img">
+        <img src="../../../../assets/images/EtiyaLogo2_white.png" />
+      </div>
+      <div class="logo-text">academy</div>
+    </div>
+    <div class="login-cont">
+      <div class="login-form-text">
+        <div class="header">Welcome!</div>
+        <div class="desc">Sign in with your organizational account</div>
+      </div>
+      <div class="login-form">
+        <etiya-input [inputLabel]="'Username'"></etiya-input>
+        <etiya-input
+          [inputLabel]="'Password'"
+          [inputType]="'password'"
+        ></etiya-input>
+        <div class="reset-btn"><a href="">Reset Password</a></div>
+        <div class="login-btn">
+          <etiya-button [buttonText]="'Login'"></etiya-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

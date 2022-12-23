@@ -1,0 +1,46 @@
+<div class="wrapper"></div>
+<div
+  *ngIf="popUp.isOpen"
+  class="modal show d-block"
+  tabindex="-1"
+  role="dialog"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-top-bg"></div>
+      <div class="modal-header">
+        <h5></h5>
+
+        <button
+          (click)="closePopUp()"
+          type="button"
+          class="popup-close-btn"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body d-flex align-items-center">
+        <div>
+          <i class="icon px-4" [ngClass]="popUp.icon"> </i>
+        </div>
+        <div class="d-flex flex-column">
+          <h2 class="modal-title">{{ popUp.title }}</h2>
+          <p class="pop-up-desc">{{ popUp.description }}</p>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-between">
+        <etiya-button
+          (click)="closePopUp()"
+          [buttonColor]="'bg-gray'"
+          [buttonText]="popUp.leftButtonText"
+        ></etiya-button>
+        <etiya-button
+          [buttonColor]="'bg-orange'"
+          [buttonText]="popUp.rightButtonText"
+        ></etiya-button>
+      </div>
+    </div>
+  </div>
+</div>

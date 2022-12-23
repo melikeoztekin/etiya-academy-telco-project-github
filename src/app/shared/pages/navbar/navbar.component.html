@@ -1,0 +1,21 @@
+<div class="navi-container">
+  <div class="header">{{ title }}</div>
+  <div class="language">
+    <button
+      *ngIf="selectedLanguage != 'tr'"
+      class="btn btn-tr"
+      (click)="changeLanguage('tr')"
+    >
+      <i class="fa-solid fa-globe"></i>
+      TR (Turkish)
+    </button>
+    <button
+      *ngIf="selectedLanguage != 'en'"
+      class="btn btn-en"
+      (click)="changeLanguage('en')"
+    >
+      <i class="fa-solid fa-globe"></i>
+      EN (English)
+    </button>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.form {
+  margin: 50px;
+}
+.input-cont {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+label {
+  position: absolute;
+  top: -16px;
+  left: 33px;
+  background-color: white;
+  padding: 0 5px;
+  font-size: 1.6rem;
+  color: #999;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 49px;
+  padding: 15px 0;
+  padding-inline-start: 15px;
+  font-size: 1.6rem;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+span {
+  color: red;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+}
