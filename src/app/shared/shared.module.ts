@@ -11,10 +11,10 @@ import { SharedRoutingModule } from './shared-routing.module';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LoginComponent } from './pages/login/login.component';
 import { ElementShowComponent } from './pages/element-show/element-show.component';
-import { NavbarComponent } from './pages/navbar/navbar.component';
-import { SidebarComponent } from './pages/sidebar/sidebar.component';
-import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { MainLayoutComponent } from './components/main-layout/main-layout.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
