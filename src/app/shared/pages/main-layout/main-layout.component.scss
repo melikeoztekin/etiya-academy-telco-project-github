@@ -1,0 +1,10 @@
+@import "../../../../colors.scss";
+
+.content {
+  margin: 20px;
+  padding: 30px 40px;
+  background-color: $white;
+  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5),
+    0px 0px 18px rgba(0, 0, 0, 0.05);
+  border-radius: 30px;
+}

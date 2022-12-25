@@ -1,0 +1,32 @@
+@import "../../../../colors.scss";
+
+.notfound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 74vh;
+  z-index: 999;
+  .notfound-404 {
+    h1 {
+      font-size: 18rem;
+      margin-bottom: 20px;
+      font-weight: 800;
+      background: url("../../../../assets/images/EtiyaBg1NoHeader.png")
+        no-repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+}

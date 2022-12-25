@@ -14,6 +14,7 @@ import { ElementShowComponent } from './pages/element-show/element-show.componen
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { SidebarComponent } from './pages/sidebar/sidebar.component';
 import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -28,6 +29,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     NavbarComponent,
     SidebarComponent,
     MainLayoutComponent,
+    NotFoundComponent,
   ],
   imports: [
     CommonModule,
