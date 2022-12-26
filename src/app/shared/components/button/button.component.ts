@@ -9,6 +9,7 @@ export class ButtonComponent {
   @Input() buttonColor: string = 'bg-orange';
   @Input() buttonText!: string | undefined;
   @Input() icon!: string | null;
+  @Input() buttonType!: string;
 
   @Output() click = new EventEmitter<any>();
 

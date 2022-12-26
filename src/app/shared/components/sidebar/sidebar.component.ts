@@ -1,4 +1,6 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,10 +8,19 @@ import { Component, ElementRef, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
-  constructor(private element: ElementRef) {}
+  constructor(
+    private element: ElementRef,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.sidebarActiveBtn();
+  }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigateByUrl('/login');
   }
 
   sidebarActiveBtn(): void {

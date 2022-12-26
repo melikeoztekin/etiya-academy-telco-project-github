@@ -17,7 +17,6 @@ export class NavbarComponent implements OnInit {
     this.languageService.setLanguage(code);
   }
   get selectedLanguage() {
-    console.log(this.languageService.selectedLanguage);
     return this.languageService.selectedLanguage;
   }
 }

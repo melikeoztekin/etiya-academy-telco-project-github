@@ -3,7 +3,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 import { ButtonComponent } from './components/button/button.component';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputComponent } from './components/input/input.component';
 import { NgModule } from '@angular/core';
 import { PopUpComponent } from './components/pop-up/pop-up.component';
@@ -19,6 +19,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
+
 @NgModule({
   declarations: [
     InputComponent,
@@ -43,6 +44,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient],
       },
     }),
+    ReactiveFormsModule,
   ],
   exports: [
     InputComponent,

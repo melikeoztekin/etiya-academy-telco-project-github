@@ -1,5 +1,9 @@
 @import "../../../../colors.scss";
 
+.wrapper {
+  filter: blur(1px);
+}
+
 .login-page {
   background: url(../../../../assets/images/EtiyaBg1NoHeader.png)
     rgba(0, 0, 0, 0.3) no-repeat center center;

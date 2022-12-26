@@ -1,23 +1,29 @@
 <app-main-layout>
-  <app-pop-up *ngIf="show"></app-pop-up>
+  <etiya-pop-up *ngIf="show"></etiya-pop-up>
   <div [class.wrapper]="show">
     <div class="d-flex justify-content-start">
       <!-- button types -->
-      <etiya-button [buttonText]="'orange button'"></etiya-button>
+      <etiya-button
+        [buttonText]="'orange button'"
+        [buttonType]="'submit'"
+      ></etiya-button>
 
       <etiya-button
         [buttonColor]="'bg-gray'"
         [buttonText]="'gray button'"
+        [buttonType]="'submit'"
       ></etiya-button>
 
       <etiya-button
         [buttonColor]="'bg-blue'"
         [buttonText]="'blue button'"
+        [buttonType]="'submit'"
       ></etiya-button>
 
       <etiya-button
         [icon]="'fa-solid fa-user-plus'"
         [buttonText]="'icon button'"
+        [buttonType]="'submit'"
       ></etiya-button>
     </div>
 

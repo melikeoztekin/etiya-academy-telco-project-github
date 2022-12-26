@@ -15,6 +15,11 @@
       *ngIf="passwordShow"
       (click)="passwordToggleEvent()"
     ></i>
-    <input [type]="inputType" [required]="requiredField" />
+    <input
+      [type]="inputType"
+      [(ngModel)]="value"
+      (ngModelChange)="onChange($event)"
+      (blur)="onTouched()"
+    />
   </div>
 </div>

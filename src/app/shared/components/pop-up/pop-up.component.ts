@@ -4,35 +4,32 @@ import { PopupModel } from '../../models/popupModel';
 import { PopUpService } from '../../services/pop-up.service';
 
 @Component({
-  selector: 'app-pop-up',
+  selector: 'etiya-pop-up',
   templateUrl: './pop-up.component.html',
-  styleUrls: ['./pop-up.component.scss']
+  styleUrls: ['./pop-up.component.scss'],
 })
 export class PopUpComponent implements OnInit {
+  constructor(private popUpService: PopUpService) {}
 
-  constructor(private popUpService:PopUpService) {}
-  
   ngOnInit(): void {
-    this.showPopUp()
+    this.showPopUp();
   }
-  
-popUp!:PopupModel;   
-// show:boolean = false;
 
-// @Output() onAddToCartClick = new EventEmitter<PopupModel>();
-// addToCartClick() {
-//  this.onAddToCartClick.emit(this.popUp1)
-  
-// }
+  popUp!: PopupModel;
+  // show:boolean = false;
 
-showPopUp() {
-  this.popUpService.isPopUp.subscribe((response)=> {
- this.popUp = response;
- 
-//  isOpen = this.popUp1
- console.log(response);
- 
-  })
+  // @Output() onAddToCartClick = new EventEmitter<PopupModel>();
+  // addToCartClick() {
+  //  this.onAddToCartClick.emit(this.popUp1)
+
+  // }
+
+  showPopUp() {
+    this.popUpService.isPopUp.subscribe((response) => {
+      this.popUp = response;
+
+      //  isOpen = this.popUp1
+    });
   }
   closePopUp() {
     this.popUp.isOpen = false;

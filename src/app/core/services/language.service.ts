@@ -15,7 +15,6 @@ export class LanguageService {
     this.localStorage.add('language', code);
   }
   get selectedLanguage(): string {
-    console.log(this.localStorage.get('language'));
     return (
       this.localStorage.get('language') || this.translateService.defaultLang
     );

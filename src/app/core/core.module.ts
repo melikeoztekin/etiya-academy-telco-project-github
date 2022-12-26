@@ -7,6 +7,11 @@ import { OverlayLoadingComponent } from './components/overlay-loading/overlay-lo
 import { IfNotDirective } from './directives/if-not.directive';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
+import { JwtModule } from '@auth0/angular-jwt';
+
+export function tokenGetter() {
+  return localStorage.getItem('token');
+}
 
 @NgModule({
   declarations: [
@@ -14,7 +19,15 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
     OverlayLoadingComponent,
     IfNotDirective,
   ],
-  imports: [CommonModule, CoreRoutingModule],
+  imports: [
+    CommonModule,
+    CoreRoutingModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+      },
+    }),
+  ],
   exports: [IfNotDirective],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },

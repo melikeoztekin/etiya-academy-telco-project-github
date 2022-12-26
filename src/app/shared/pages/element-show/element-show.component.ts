@@ -36,7 +36,6 @@ export class ElementShowComponent {
   showPopUp() {
     this.popUpService.isPopUp.subscribe((response) => {
       this.show = response.isOpen;
-      console.log(response);
     });
   }
 }

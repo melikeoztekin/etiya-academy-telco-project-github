@@ -30,7 +30,10 @@
           <p class="pop-up-desc">{{ popUp.description }}</p>
         </div>
       </div>
-      <div class="modal-footer d-flex justify-content-between">
+      <div
+        class="modal-footer d-flex justify-content-between"
+        *ngIf="popUp.leftButtonText || popUp.rightButtonText"
+      >
         <etiya-button
           (click)="closePopUp()"
           [buttonColor]="'bg-gray'"
