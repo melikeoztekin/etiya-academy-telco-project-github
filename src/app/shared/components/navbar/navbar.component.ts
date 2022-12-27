@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { LanguageService } from 'src/app/core/services/language.service';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'etiya-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })

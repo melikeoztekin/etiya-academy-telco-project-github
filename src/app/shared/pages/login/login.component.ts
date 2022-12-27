@@ -7,7 +7,7 @@ import { LocalStorageService } from 'src/app/core/services/local-storage.service
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
+  selector: 'etiya-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
