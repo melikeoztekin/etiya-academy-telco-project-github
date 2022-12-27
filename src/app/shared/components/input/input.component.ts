@@ -45,8 +45,8 @@ export class InputComponent implements OnInit, ControlValueAccessor {
     this.onTouched();
   }
 
-  public passwordToggle: boolean = false;
-  public passwordShow: boolean = true;
+  public passwordToggle: boolean = true;
+  public passwordShow: boolean = false;
 
   ngOnInit(): void {
     this.passwordToggle = this.inputType == 'password';
