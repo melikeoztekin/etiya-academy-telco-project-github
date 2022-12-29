@@ -1,12 +1,15 @@
 @import "../../../../colors.scss";
 
 .navi-container {
-  width: 100%;
+  width: 84%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px 15px 30px;
   background-color: $dark-blue;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
 }
 .header {
   color: $orange;

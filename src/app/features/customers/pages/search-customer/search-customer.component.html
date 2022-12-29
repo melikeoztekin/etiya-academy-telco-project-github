@@ -1,0 +1,119 @@
+<etiya-main-layout>
+  <div class="row">
+    <div class="col-3">
+      <etiya-background-temp [padding]="'20px'">
+        <h1 class="container_title">{{ "search_filter" | translate }}</h1>
+        <ul class="list-group mt-2">
+          <etiya-input
+            [(ngModel)]="customerFilter.id"
+            [inputLabel]="'customer_id'"
+            [inputType]="'number'"
+          ></etiya-input>
+          <etiya-input
+            [(ngModel)]="customerFilter.nationalityId"
+            [inputLabel]="'id_number'"
+            [inputType]="'number'"
+          ></etiya-input>
+          <etiya-input
+            [(ngModel)]="customerFilter.accountNumber"
+            [inputLabel]="'account_number'"
+            [inputType]="'string'"
+          ></etiya-input>
+          <etiya-input
+            [(ngModel)]="customerFilter.gsmNumber"
+            [inputLabel]="'gsm_number'"
+            [inputType]="'string'"
+          ></etiya-input>
+          <etiya-input
+            [(ngModel)]="customerFilter.firstName"
+            [inputLabel]="'first_name'"
+            [inputType]="'string'"
+          ></etiya-input>
+          <etiya-input
+            [(ngModel)]="customerFilter.lastName"
+            [inputLabel]="'last_name'"
+            [inputType]="'string'"
+          ></etiya-input>
+          <etiya-input
+            [(ngModel)]="customerFilter.orderNumber"
+            [inputLabel]="'order_number'"
+            [inputType]="'number'"
+          ></etiya-input>
+        </ul>
+        <div class="modal-footer d-flex justify-content-between px-2">
+          <etiya-button
+            (onClickButton)="searchFilter()"
+            [icon]="'fa-solid fa-search'"
+            [buttonColor]="'bg-orange'"
+            [buttonText]="'search'"
+          ></etiya-button>
+          <etiya-button
+            (onClickButton)="clearFilter()"
+            [icon]="'fa-solid fa-eraser'"
+            [buttonColor]="'bg-gray'"
+            [buttonText]="'clear'"
+          ></etiya-button>
+        </div>
+      </etiya-background-temp>
+    </div>
+    <div class="col">
+      <etiya-background-temp [padding]="'20px 0px'" [height]="'100%'">
+        <h1 class="container_title px-4">{{ "search_result" | translate }}</h1>
+        <table class="table mt-3">
+          <thead class="thead-light">
+            <tr class="py-3">
+              <th>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+              </th>
+              <th scope="col">{{ "customer_id" | translate }}</th>
+              <th scope="col">{{ "first_name" | translate }}</th>
+              <th scope="col">{{ "last_name" | translate }}</th>
+              <th scope="col">{{ "role" | translate }}</th>
+              <th scope="col">{{ "id_number" | translate }}</th>
+            </tr>
+          </thead>
+          <ng-container *ngIf="!filterApplied">
+            <etiya-pop-up *ngIf="show"></etiya-pop-up>
+          </ng-container>
+          <ng-template
+            *ngIf="filterApplied"
+            ngFor
+            let-customer
+            [ngForOf]="customers"
+          >
+            <tbody>
+              <tr [routerLink]="'/customer/' + customer.id + '/customer_info'">
+                <td scope="row">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </td>
+                <td>{{ customer.id }}</td>
+                <td>{{ customer.firstName }} {{ customer.middleName }}</td>
+                <td>{{ customer.lastName }}</td>
+                <td>{{ customer.role }}</td>
+                <td>{{ customer.nationalityId }}</td>
+              </tr>
+            </tbody>
+          </ng-template>
+        </table>
+        <div class="create_button">
+          <etiya-button
+            (onClickButton)="searchFilter()"
+            [icon]="'fa-solid fa-circle-plus'"
+            [buttonColor]="'bg-orange'"
+            [buttonText]="'create_customer'"
+          ></etiya-button>
+        </div>
+      </etiya-background-temp>
+    </div>
+  </div>
+</etiya-main-layout>

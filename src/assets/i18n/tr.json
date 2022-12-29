@@ -1,4 +1,38 @@
 {
-  "welcome": "Hoş geldiniz..",
-  "search_customer": "Müşteri Ara"
+  "academy": "Akademi",
+  "welcome": "Hoşgeldiniz",
+  "login_desc": "Kurumsal hesabınızla oturum açın.",
+  "user_name": "Kullanıcı Adı",
+  "password": "Parola",
+  "reset_password": "Şifreyi Yenile",
+  "login": "Giriş Yap",
+
+  "dashboard": "Kontrol Paneli",
+  "name_surname": "Ad Soyad",
+  "settings": "Ayarlar",
+  "logout": "Çıkış Yap",
+
+  "page_not_found": "SAYFA BULUNAMADI!",
+  "page_not_found_desc": "Aradığınız sayfa bulunamadı.",
+  "go_home": "ANA SAYFAYA DÖN",
+
+  "no_customer!": "Müşteri Bulunamadı!",
+  "no_customer_desc": "Yeni bir müşteri eklemek ister misiniz?",
+  "cancel": "İptal Et",
+
+  "search_filter": "Filtreli Arama",
+  "search_result": "Arama Sonuçları",
+  "customer_id": "Müşteri Numarası",
+  "id_number": "Kimlik Numarası",
+  "account_number": "Hesap Numarası",
+  "gsm_number": "Telefon Numarası",
+  "first_name": "Adı",
+  "last_name": "Soyadı",
+  "order_number": "Sipariş Numarası",
+  "role": "Rol",
+  "search": "Ara",
+  "clear": "Temizle",
+  "create_customer": "Yeni Müşteri Oluştur",
+
+  "search_customer": "Müşteri Arama"
 }

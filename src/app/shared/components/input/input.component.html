@@ -1,27 +1,25 @@
-<div class="form">
-  <div class="input-cont">
-    <label class="input"
-      >{{ inputLabel }} <span *ngIf="requiredField">*</span>
-    </label>
-    <input
-      [type]="inputType"
-      [(ngModel)]="value"
-      (ngModelChange)="onChange($event)"
-      (blur)="onTouched()"
-    />
-    <div class="input-group-addon">
-      <i
-        [ngClass]="icon1"
-        aria-hidden="false"
-        *ngIf="!passwordShow"
-        (click)="passwordToggleEvent()"
-      ></i>
-      <i
-        [ngClass]="icon2"
-        aria-hidden="false"
-        *ngIf="passwordShow"
-        (click)="passwordToggleEvent()"
-      ></i>
-    </div>
+<div class="input-cont">
+  <label class="input"
+    >{{ inputLabel | translate }} <span *ngIf="requiredField">*</span>
+  </label>
+  <input
+    [type]="inputType"
+    [(ngModel)]="value"
+    (ngModelChange)="onChange($event)"
+    (blur)="onTouched()"
+  />
+  <div class="input-group-addon">
+    <i
+      [ngClass]="icon1"
+      aria-hidden="false"
+      *ngIf="!passwordShow"
+      (click)="passwordToggleEvent()"
+    ></i>
+    <i
+      [ngClass]="icon2"
+      aria-hidden="false"
+      *ngIf="passwordShow"
+      (click)="passwordToggleEvent()"
+    ></i>
   </div>
 </div>

@@ -15,7 +15,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { UiBackgroundTemplateComponent } from './components/ui-background-template/ui-background-template.component';
+import { BackgroundTempComponent } from './components/background-temp/background-temp.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -32,7 +32,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SidebarComponent,
     MainLayoutComponent,
     NotFoundComponent,
-    UiBackgroundTemplateComponent,
+    BackgroundTempComponent,
   ],
   imports: [
     CommonModule,
@@ -56,6 +56,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ElementShowComponent,
     NavbarComponent,
     SidebarComponent,
+    MainLayoutComponent,
+    BackgroundTempComponent,
   ],
 })
 export class SharedModule {}

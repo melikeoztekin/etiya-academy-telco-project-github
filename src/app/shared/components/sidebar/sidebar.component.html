@@ -4,14 +4,14 @@
       <div class="logo-img">
         <img src="../../../../assets/images/EtiyaLogo1_blue.png" />
       </div>
-      <div class="logo-text">Dashboard</div>
+      <div class="logo-text">{{ "dashboard" | translate }}</div>
     </div>
     <div class="user-cont">
       <div class="user-img">
         <img src="../../../../assets/images/user.jpg" />
       </div>
       <div class="user-desc">
-        <strong>Name Surname</strong>
+        <strong>{{ "name_surname" | translate }}</strong>
         <span>user.name@etiya.com</span>
       </div>
     </div>
@@ -19,7 +19,7 @@
       <div class="sidebar-button-content">
         <div class="sidebar-dark-btn" routerLink="/404notfound">
           <i class="fa-brands fa-buromobelexperte px-3"></i
-          ><span>Dashboard</span>
+          ><span>{{ "dashboard" | translate }}</span>
         </div>
         <div class="sidebar-dark-btn active" routerLink="/404notfound">
           <i class="fa-regular fa-user px-3"></i
@@ -31,14 +31,16 @@
         </div>
         <hr />
         <div class="sidebar-dark-btn" routerLink="/404notfound">
-          <i class="fa-solid fa-ellipsis px-3"></i><span>Settings</span>
+          <i class="fa-solid fa-ellipsis px-3"></i
+          ><span>{{ "settings" | translate }}</span>
         </div>
       </div>
     </div>
   </div>
   <div class="sidebar-bottom">
     <div class="sidebar-bottom-content" (click)="logout()">
-      <i class="fa-solid fa-right-from-bracket px-3"></i><span>Logout</span>
+      <i class="fa-solid fa-right-from-bracket px-3"></i
+      ><span>{{ "logout" | translate }}</span>
     </div>
   </div>
 </div>

@@ -5,7 +5,7 @@
   tabindex="-1"
   role="dialog"
 >
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-top-bg"></div>
       <div class="modal-header">
@@ -26,8 +26,8 @@
           <i class="icon px-4" [ngClass]="popUp.icon"> </i>
         </div>
         <div class="d-flex flex-column">
-          <h2 class="modal-title">{{ popUp.title }}</h2>
-          <p class="pop-up-desc">{{ popUp.description }}</p>
+          <h2 class="modal-title">{{ popUp.title | translate }}</h2>
+          <p class="pop-up-desc">{{ popUp.description | translate }}</p>
         </div>
       </div>
       <div
@@ -37,11 +37,11 @@
         <etiya-button
           (click)="closePopUp()"
           [buttonColor]="'bg-gray'"
-          [buttonText]="popUp.leftButtonText"
+          [buttonText]="popUp.leftButtonText | translate"
         ></etiya-button>
         <etiya-button
           [buttonColor]="'bg-orange'"
-          [buttonText]="popUp.rightButtonText"
+          [buttonText]="popUp.rightButtonText | translate"
         ></etiya-button>
       </div>
     </div>

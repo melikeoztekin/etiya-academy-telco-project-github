@@ -18,8 +18,6 @@ export class PopUpService {
   constructor() {}
 
   startPopUp(popUp: PopupModel) {
-    // this.isPopUp.next({isOpen:true,title:popUp.title , description:popUp.description,icon:popUp.icon,leftButtonText:'',rightButtonText:''})
-    popUp.isOpen = true;
     this.isPopUp.next(popUp);
   }
 
@@ -27,6 +25,3 @@ export class PopUpService {
     this.isPopUp.next({ ...this.isPopUp.value, isOpen: false });
   }
 }
-
-// {isOpen:popUp.isOpen, title:popUp.title , description:popUp.description,
-//   icon:popUp.icon,leftButtonText:popUp.leftButtonText,rightButtonText:popUp.leftButtonText}

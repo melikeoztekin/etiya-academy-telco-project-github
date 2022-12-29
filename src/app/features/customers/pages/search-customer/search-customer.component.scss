@@ -1,0 +1,53 @@
+@import "../../../../../colors.scss";
+
+.table_style {
+  background-color: $white;
+  border-radius: 30px;
+  margin-right: 20px;
+  margin-top: -10px;
+  height: 30px;
+  margin-bottom: 50px;
+}
+
+.col-3 {
+  background-color: $white;
+  border-radius: 30px;
+}
+
+.container_title {
+  width: 100%;
+  font-weight: 600;
+}
+
+th {
+  font-weight: 500;
+  background-color: #fafafa;
+  color: $blue;
+  font-size: 1.3rem;
+  padding: 10px 10px;
+  border-top: 0.5px solid $light-gray;
+  border-bottom: 0.5px solid $light-gray;
+}
+th:first-child {
+  font-size: 1.5rem;
+}
+td {
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+tbody tr:hover {
+  background-color: $light;
+}
+
+tbody tr td:nth-child(2) {
+  color: $orange;
+}
+
+.create_button {
+  bottom: 20px;
+  position: fixed;
+  right: 60px;
+}

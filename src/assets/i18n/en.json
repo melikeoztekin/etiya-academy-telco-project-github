@@ -1,4 +1,38 @@
 {
-  "welcome": "Welcome 1",
+  "academy": "Academy",
+  "welcome": "Welcome",
+  "login_desc": "Sign in with your organizational account.",
+  "user_name": "User Name",
+  "password": "Password",
+  "reset_password": "Reset Password",
+  "login": "Login",
+
+  "dashboard": "Dashboard",
+  "name_surname": "Name Surname",
+  "settings": "Settings",
+  "logout": "Logout",
+
+  "page_not_found": "PAGE NOT FOUND!",
+  "page_not_found_desc": "The page you are looking for could not be found.",
+  "go_home": "GO RETURN HOME",
+
+  "no_customer!": "No customer found!",
+  "no_customer_desc": "Would you like to add a new customer?",
+  "cancel": "Cancel",
+
+  "search_filter": "Search Filter",
+  "search_result": "Search Result",
+  "customer_id": "Customer No",
+  "id_number": "ID Number",
+  "account_number": "Account Number",
+  "gsm_number": "GSM No",
+  "first_name": "First Name",
+  "last_name": "Last Name",
+  "order_number": "Order Number",
+  "role": "Rol",
+  "search": "Search",
+  "clear": "Clear",
+  "create_customer": "Create Customer",
+
   "search_customer": "Search Customer"
 }

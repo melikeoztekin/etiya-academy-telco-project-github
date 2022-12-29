@@ -1,12 +1,12 @@
-<etiya-main-layout>
+<etiya-main-layout [width]="'auto'" [padding]="'30px'" [margin]="'20px'">
   <div class="container">
     <div class="notfound">
       <div class="notfound-404">
         <h1>Oops!</h1>
       </div>
-      <h2>404 - PAGE NOT FOUND</h2>
-      <p>The page you are looking for could not be found.</p>
-      <etiya-button [buttonText]="'RETURN HOME'" routerLink=""></etiya-button>
+      <h2>404 - {{ "page_not_found" | translate }}</h2>
+      <p>{{ "page_not_found_desc" | translate }}</p>
+      <etiya-button [buttonText]="'go_home'" routerLink=""></etiya-button>
     </div>
   </div>
 </etiya-main-layout>

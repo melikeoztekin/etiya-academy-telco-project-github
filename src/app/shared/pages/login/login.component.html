@@ -6,31 +6,33 @@
         <div class="logo-img">
           <img src="../../../../assets/images/EtiyaLogo2_white.png" />
         </div>
-        <div class="logo-text">academy</div>
+        <div class="logo-text">{{ "academy" | translate }}</div>
       </div>
       <div class="login-cont">
         <div class="login-form-text">
-          <div class="header">Welcome!</div>
-          <div class="desc">Sign in with your organizational account</div>
+          <div class="header">{{ "welcome" | translate }}!</div>
+          <div class="desc">{{ "login_desc" | translate }}</div>
         </div>
         <form (submit)="onLogin()" [formGroup]="loginForm">
-          <div class="login-form">
+          <div class="login-form py-3">
             <etiya-input
-              [inputLabel]="'Username'"
+              [inputLabel]="'user_name'"
               [inputType]="'text'"
               formControlName="userName"
             ></etiya-input>
             <etiya-input
-              [inputLabel]="'Password'"
+              [inputLabel]="'password'"
               [inputType]="'password'"
               formControlName="password"
               [icon1]="'fa-solid fa-eye'"
               [icon2]="'fa-solid fa-eye-slash'"
             ></etiya-input>
-            <div class="reset-btn"><a href="">Reset Password</a></div>
+            <div class="reset-btn">
+              <a href="">{{ "reset_password" | translate }}</a>
+            </div>
             <div class="login-btn">
               <etiya-button
-                [buttonText]="'Login'"
+                [buttonText]="'login'"
                 [buttonType]="'submit'"
               ></etiya-button>
             </div>

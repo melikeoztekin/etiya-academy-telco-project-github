@@ -16,21 +16,13 @@ export class PopUpComponent implements OnInit {
   }
 
   popUp!: PopupModel;
-  // show:boolean = false;
-
-  // @Output() onAddToCartClick = new EventEmitter<PopupModel>();
-  // addToCartClick() {
-  //  this.onAddToCartClick.emit(this.popUp1)
-
-  // }
 
   showPopUp() {
     this.popUpService.isPopUp.subscribe((response) => {
       this.popUp = response;
-
-      //  isOpen = this.popUp1
     });
   }
+
   closePopUp() {
     this.popUp.isOpen = false;
     this.popUpService.stopPopUp();

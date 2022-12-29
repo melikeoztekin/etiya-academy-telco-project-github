@@ -6,6 +6,10 @@
   flex-direction: column;
   justify-content: space-between;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: fixed;
+  left: 0;
+  background-color: $white;
+
   .sidebar-top {
     .sidebar-logo {
       padding: 4px 26px;

@@ -1,3 +1,4 @@
+import { LanguageService } from './../../../core/services/language.service';
 import { PopupModel } from './../../models/popupModel';
 import { PopUpService } from './../../services/pop-up.service';
 import { AuthService } from './../../../core/services/auth.service';
@@ -21,7 +22,8 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private localStorageService: LocalStorageService,
     private router: Router,
-    private popUpService: PopUpService
+    private popUpService: PopUpService,
+    private languageService: LanguageService
   ) {}
 
   ngOnInit(): void {

@@ -1,7 +1,4 @@
-<button
-  [ngClass]="buttonColor"
->
+<button (click)="onClick($event)" [ngClass]="buttonColor">
   <i *ngIf="icon" class="px-2" [ngClass]="icon"></i>
-  {{ buttonText }}
+  {{ buttonText | translate }}
 </button>
-

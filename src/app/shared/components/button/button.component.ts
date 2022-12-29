@@ -11,9 +11,9 @@ export class ButtonComponent {
   @Input() icon!: string | null;
   @Input() buttonType!: string;
 
-  @Output() click = new EventEmitter<any>();
+  @Output() onClickButton = new EventEmitter<any>();
 
   onClick(event: Event) {
-    this.click.emit(event);
+    this.onClickButton.emit(event);
   }
 }

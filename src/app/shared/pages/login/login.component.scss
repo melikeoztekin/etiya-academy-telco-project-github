@@ -36,6 +36,7 @@
   background-color: $white;
   padding: 40px 60px;
   border-radius: 30px;
+  margin: 10px 30px;
 }
 .login-form {
   width: 100% !important;
@@ -56,7 +57,7 @@
   color: $dark-gray;
 }
 .reset-btn {
-  margin-top: -30px;
+  margin-top: 0px;
   text-align: center;
   a {
     font-size: 1.6rem;
